@@ -23,14 +23,14 @@ import lombok.RequiredArgsConstructor;
 @SpringBootApplication
 @EnableBatchProcessing
 @RequiredArgsConstructor
-public class SpringbatchkafkaProducerApplication {
+public class SpringbatchKafkaProducerApplication {
 
 	private final JobBuilderFactory jobBuilderFactory;
 	private final StepBuilderFactory stepBuilderFactory;
 	private final KafkaTemplate<Long, Book> kafkaTemplate;
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbatchkafkaProducerApplication.class, args);
+		SpringApplication.run(SpringbatchKafkaProducerApplication.class, args);
 	}
 
 	@Bean
