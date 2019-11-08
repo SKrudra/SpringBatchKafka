@@ -57,7 +57,7 @@ public class SpringBatchKafkaConsumerApplication {
 				items.forEach(it -> log.info("Book: " + it));
 			}
 		};
-		return this.stepBuilderFactory.get("step").<Book, Book>chunk(10).writer(writer).reader(kafkaItemReader())
+		return this.stepBuilderFactory.get("step").<Book, Book>chunk(10).reader(kafkaItemReader()).writer(writer)
 				.build();
 	}
 }
